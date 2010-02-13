@@ -1,12 +1,24 @@
 = Carousel
 
-A rotating banner for Radiant extensions. Based on "Infinite Carousel" by CatchMyFame.com and includes JQuery (http://www.catchmyfame.com/catchmyfame-jquery-plugins/). Version 1.2.2 of Infinite Carousel. (not latest, by the way).
-By Anna Billstrom for Blazing Cloud (http://www.blazingcloud.net)
+A customizable infinitely rotating banner that can be used standalone or as part of a Radiant installation.
+
+This repository includes
+ * Rotating image carousel based on "Infinite Carousel" Version 1.2.2 by CatchMyFame.com (http://www.catchmyfame.com/catchmyfame-jquery-plugins/), as customized by @soychicka and @macboypro for Blazing Cloud (http://www.blazingcloud.net), 2009.
+ * Radius tag implementation by Anna Billstrom for Blazing Cloud (http://www.blazingcloud.net), 2009
+ * GUI implementation by @soychicka for GoodCubed, 2010.
 
 
-To Install
+Basics:
+To display items in the carousel, create an unordered list containing the image and a p-tag for any text you wish to display in the text box.  
+
+bc. 
+For Radiant installations, this is handled by the radius "carousel_image" tag,  
+
+bc. <r:carousel_image src="[path to image, i.e. http://localhost/images/1.jpg]" caption="The image" />
+
+To Install as a Radiant extension
 1. In your vendor/extensions directory, enter:
-git clone git@github.com:banane/radiant-carousel-extension.git carousel
+git clone git@github.com:soychicka/radiant-carousel-extension.git carousel
 
 2. OPTIONAL: You can copy images to a radiant public image directory by typing, in your Radiant root:
 rake radiant:extensions:carousel:copy_images
