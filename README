@@ -21,13 +21,13 @@ For Radiant installations, this is handled by the radius "carousel_image" tag,
 
 To use this carousel in any project:
 1. In your project,
-   git clone git@github.com:soychicka/infinite-radiance.git carousel
+   git clone git@github.com:soychicka/infinite-radiance.git infinite_radiance
 
 2.  Include the following stylesheets and javascript in the order below in the header of any pages upon which you wish to use the carousel
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascript/jquery.infinitecarousel.js"></script>
-    <script type="text/javascript" src="/javascript/carousel.js"></script>
-    <link rel=stylesheet href="/stylesheet/carousel.css" type="text/css" media=screen> 
+    <script type="text/javascript" src="/javascripts/jquery.infinitecarousel.js"></script>
+    <script type="text/javascript" src="/javascripts/carousel.js"></script>
+    <link rel=stylesheet href="/stylesheets/carousel.css" type="text/css" media=screen> 
 
 3.  Move the files listed above into the locations you just referenced.
 
@@ -38,7 +38,7 @@ To use this carousel in any project:
 ------------------------------------------------------------------------------------------------------------------
 To Install as a Radiant extension
 1. In your vendor/extensions directory, enter:
-git clone git@github.com:soychicka/infinite-radiance.git carousel
+git clone git@github.com:soychicka/infinite-radiance.git infinite_radiance
 
 2. OPTIONAL: You can copy images to a radiant public image directory by typing, in your Radiant root:
 rake radiant:extensions:carousel:copy_images
@@ -56,6 +56,6 @@ rake radiant:extensions:carousel:update
 
 5. Lastly, make sure the pages that carry the carousel have a layout, that includes the following links in the header (in this order):
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascript/jquery.infinitecarousel.js"></script>
-    <script type="text/javascript" src="/javascript/carousel.js"></script>
-    <link rel=stylesheet href="/stylesheet/carousel.css" type="text/css" media=screen> 
+    <script type="text/javascript" src="/javascripts/jquery.infinitecarousel.js"></script>
+    <script type="text/javascript" src="/javascripts/carousel.js"></script>
+    <link rel=stylesheet href="/stylesheets/carousel.css" type="text/css" media=screen> 
