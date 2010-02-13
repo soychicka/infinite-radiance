@@ -1,11 +1,11 @@
-= Carousel
+= Infinite Radiance Carousel
 
-A customizable infinitely rotating banner that can be used standalone or as part of a Radiant installation.
+A customizable infinite image carousel that can be used standalone or as part of a Radiant installation.
 
 This repository includes
  * Rotating image carousel based on "Infinite Carousel" Version 1.2.2 by CatchMyFame.com (http://www.catchmyfame.com/catchmyfame-jquery-plugins/), as customized by @soychicka and @macboypro for Blazing Cloud (http://www.blazingcloud.net), 2009.
  * Radius tag implementation by Anna Billstrom for Blazing Cloud (http://www.blazingcloud.net), 2009
- * GUI implementation by @soychicka for GoodCubed, 2010.
+ * GUI implementation by @soychicka for GoodCubed, 2010. (in progress)
 
 
 Basics:
@@ -17,33 +17,45 @@ For Radiant installations, this is handled by the radius "carousel_image" tag,
  <r:carousel_image src="path to image" caption="The image" />
 </r:carousel>
 
+==================================================================================================================
 
-To install in any project:
+To use this carousel in any project:
 1. In your project,
-git clone git@github.com:soychicka/radiant-carousel-extension.git carousel
+   git clone git@github.com:soychicka/radiant-carousel-extension.git carousel
 
-2.  Move 
+2.  Include the following stylesheets and javascript in the order below in the header of any pages upon which you wish to use the carousel
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascript/jquery.infinitecarousel.js"></script>
+    <script type="text/javascript" src="/javascript/carousel.js"></script>
+    <link rel=stylesheet href="/stylesheet/carousel.css" type="text/css" media=screen> 
 
+3.  Move the files listed above into the locations you just referenced.
+
+4.  Create an unordered list, and for each image you wish to display, create a list item containing the image and a p-tag for any text you wish to display in the text box.  
+    <li><img src="path to image"><p>and the caption goes here</p></li>
+
+    *note: this was written from memory and not tested.  feedback gladly accepted!
+------------------------------------------------------------------------------------------------------------------
 To Install as a Radiant extension
 1. In your vendor/extensions directory, enter:
 git clone git@github.com:soychicka/radiant-carousel-extension.git carousel
 
 2. OPTIONAL: You can copy images to a radiant public image directory by typing, in your Radiant root:
 rake radiant:extensions:carousel:copy_images
-Or, you can use MediaMaid to get links to your images. 
-Or, you can hand-code in the links to your images.
+   Or, you can use MediaMaid to get links to your images. 
+   Or, you can hand-code in the links to your images.
 
 3. (back to required steps) In your radiant root directory, enter:
 rake radiant:extensions:carousel:update
 
 4. In the Radiant Admin UI interface, use the following tags:
-<r:carousel>
-<r:carousel_image src="[path to image, i.e. http://localhost/images/1.jpg]" caption="The image" />
-... iterate through as many carousel images as you want.
-</r:carousel>
+   <r:carousel>
+    <r:carousel_image src="[path to image, i.e. http://localhost/images/1.jpg]" caption="The image" />
+    ... iterate through as many carousel images as you want.
+   </r:carousel>
 
 5. Lastly, make sure the pages that carry the carousel have a layout, that includes the following links in the header (in this order):
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="/javascript/jquery.infinitecarousel.js"></script>
-<script type="text/javascript" src="/javascript/carousel.js"></script>
-<LINK REL=StyleSheet HREF="/stylesheet/carousel.css" TYPE="text/css" MEDIA=screen> 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascript/jquery.infinitecarousel.js"></script>
+    <script type="text/javascript" src="/javascript/carousel.js"></script>
+    <link rel=stylesheet href="/stylesheet/carousel.css" type="text/css" media=screen> 
