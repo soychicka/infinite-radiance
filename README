@@ -10,11 +10,19 @@ This repository includes
 
 Basics:
 To display items in the carousel, create an unordered list containing the image and a p-tag for any text you wish to display in the text box.  
+<li><img src="path to image"><p>and the caption goes here</p></li>
 
-bc. 
 For Radiant installations, this is handled by the radius "carousel_image" tag,  
+<r:carousel>
+ <r:carousel_image src="path to image" caption="The image" />
+</r:carousel>
 
-bc. <r:carousel_image src="[path to image, i.e. http://localhost/images/1.jpg]" caption="The image" />
+
+To install in any project:
+1. In your project,
+git clone git@github.com:soychicka/radiant-carousel-extension.git carousel
+
+2.  Move 
 
 To Install as a Radiant extension
 1. In your vendor/extensions directory, enter:
